@@ -4,9 +4,9 @@ const PublicacaoDoDia = require('../../models/publicacao-do-dia')
 const moment = require('moment')
 const knox = require('knox');
 const client = knox.createClient({
-    key: 'key',
-    secret: 'secret',
-    bucket: 'bucket'
+    key: 'AKIAJUVEGFRFMWAMV4EQ',
+    secret: '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',
+    bucket: 'remember-files'
 })
 const FB = require('fb')
       
@@ -23,7 +23,7 @@ exports.AcessarBanda = (nome, callback) => {
     Post.find({ nome_url: nome }, (err, banda) => {
         if (err) throw err
 
-        callback(banda)
+        callback(banda[0])
     })
 }
 
