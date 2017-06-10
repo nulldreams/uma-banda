@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="css/botao.css">
+
+<div class="header">
+    <h1>Projeto Uma Banda</h1>
+</div>
+
+<div class="corpo">
+
+    <p>Olá, pessoa. Tudo bem?
+
+        <p>Todos os dias esse site irá publicar uma banda "desconhecida", seja nacional ou estrangeira (o que importa é o som
+            dos caras!), caso você conheça uma banda que você curta muito e quer que o mundo a conheça, nos envie ela que
+            iremos postar o quanto antes 💜</p>
+
+        <p>Envie uma mensagem pelo face mesmo, mas lembre de usar o formato abaixo!</p>
+        <small>Todos os dados são referentes a banda :)</small>
+        <pre>
+Nome:
+Facebook:
+Site:
+Video:
+        </pre>
+
+        <h2>Para desenvolvedores:</h2>
+
+        <p>O projeto "Uma banda" foi criado seguindo a stack MEAN, com o proposito de aprender mais sobre a stack e também divulgar
+            as nossas amadas bandas alternativas 😊</p>
+
+        <p>Temos uma API publica para vocês enviarem as sugestões, seguem as informações dela abaixo:</p>
+        <pre>
+POST igormartins:3000/v1/bandas
+
+Body:
+{
+    nome: 'banda',
+    facebook: 'pagina do facebook',
+    site: 'site da banda',
+    video: 'url do youtube'
+}
+        </pre>
+
+        <div class="botao" ng-click="Banda()">
+            <a class="btn purple">Bora conhecer a bandaaa!</a>
+        </div>
+        <div class="perfil">
+            <img src="https://avatars3.githubusercontent.com/u/13773645?v=3&s=460" />
+            <p>Igor Souza Martins</p>
+        </div>
+        <div class="social">
+            <div class="icons_share">
+                <a href="https://www.facebook.com/ThereisnodeaththereistheForce" target="new_blank"><img src="./img/facebook.png" width="5%" /></a>
+                <a href="https://github.com/nulldreams" target="new_blank"><img src="./img/github.png" width="5%" /></a>
+                <a href="https://www.instagram.com/igao_sm/" target="new_blank"><img src="./img/instagram.png" width="5%" /></a>
+                <a href="http://steamcommunity.com/id/igrMon/" target="new_blank"><img src="./img/steam.png" width="5%" /></a>
+            </div>
+        </div>
+</div>
