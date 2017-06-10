@@ -12,6 +12,12 @@ exports.BandaDoDia = (req, res) => {
     })
 }
 
+exports.ConsultarBanda = (req, res) => {
+    Controller.AcessarBanda(req.params.nome, (retorno) => {
+        res.json(retorno)
+    })
+}
+
 exports.Publicar = (req, res) => {
     Controller.Publicar(req, (retorno) => {
         res.json(retorno)

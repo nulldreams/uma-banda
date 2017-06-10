@@ -19,6 +19,7 @@ module.exports = (app) => {
 
     Monitorador.Monitorar()
 
+    app.get('/bandas/:nome', Post.ConsultarBanda)
     app.get('/banda-do-dia', Post.BandaDoDia)
     app.get('/post', Post.AcessarPost)
     app.post('/post', upload.single('imagem'), Post.Publicar)

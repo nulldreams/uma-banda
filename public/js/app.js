@@ -25,6 +25,11 @@ app.config(function ($routeProvider, $locationProvider, MetaTagsProvider) {
 
         .when('/bandas', {
             templateUrl: 'views/post.html',
+            controller: 'BandasCtrl',
+        })
+
+        .when('/banda/:nome', {
+            templateUrl: 'views/post.html',
             controller: 'BandaCtrl',
         })
 
@@ -44,7 +49,22 @@ app.config(function ($routeProvider, $locationProvider, MetaTagsProvider) {
 });
 
 
-app.controller('BandaCtrl', function ($rootScope, $location, $http, $scope, $window) { 
+app.controller('BandaCtrl', function ($rootScope, $location, $http, $scope, $window, $routeParams) {
+    let nome = $routeParams.nome
+    console.log(nome)
+    $http({
+        method: 'GET',
+        url: '/bandas/' + nome
+    }).then((success) => {
+        $scope.banda = success.data
+        $scope.video_url = $scope.banda.video_url
+        alert($scope.banda)
+    }, (error) => {
+        alert(error)
+    })
+});
+
+app.controller('BandasCtrl', function ($rootScope, $location, $http, $scope, $window) { 
     $http({
         method: 'GET',
         url: '/banda-do-dia'
