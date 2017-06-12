@@ -4,9 +4,9 @@ const PublicacaoDoDia = require('../../models/publicacao-do-dia')
 const moment = require('moment')
 const knox = require('knox');
 const client = knox.createClient({
-    key: 'AKIAJUVEGFRFMWAMV4EQ',
-    secret: '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',
-    bucket: 'remember-files'
+    key: '--key',
+    secret: '--secret',
+    bucket: '--bucket'
 })
 const FB = require('fb')
       
